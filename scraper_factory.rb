@@ -31,7 +31,7 @@ module Scrapers
       # Disabled until a single DA can be found on their site for testing
       #EProclaimScraper.new("Barossa Council", "Barossa", "SA", "https://eproclaim.barossa.sa.gov.au/p190900/eproclaim/"),
 
-      BurnsideScraper.new("Burnside City Council", "Burnside", "SA"),
+      BurnsideScraper.new("City of Burnside", "Burnside", "SA"),
       GoldCoastScraper.new("Gold Coast City Council", "Gold Coast", "QLD"),
       # TODO: Figure out which of these authorities using the SPEAR system have planning information
       # in the system and which just have subdivision information
