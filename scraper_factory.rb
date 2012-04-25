@@ -37,7 +37,7 @@ module Scrapers
       #EProclaimScraper.new("Barossa Council", "Barossa", "SA", "https://eproclaim.barossa.sa.gov.au/p190900/eproclaim/"),
 
       BurnsideScraper.new("City of Burnside", "Burnside", "SA"),
-      GoldCoastScraper.new("Gold Coast City Council", "Gold Coast", "QLD"),
+      ScraperWikiScraper.new("Gold Coast City Council", "Gold Coast", "QLD", "gold_coast_city_council_development_applications"),
       # TODO: Figure out which of these authorities using the SPEAR system have planning information
       # in the system and which just have subdivision information
       SPEARScraper.new("Ararat Rural City Council (SPEAR)", "Ararat", "VIC", "Ararat Rural City Council"),
