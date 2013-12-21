@@ -33,6 +33,7 @@ module Scrapers
       IpswichScraper.new("City of Ipswich", "Ipswich", "QLD"),
       LockyerValleyScraper.new("Lockyer Valley Regional Council", "Lockyer Valley", "QLD"),
       RedlandScraper.new("Redland City Council", "Redland", "QLD"),
+      FairfieldScraper.new("Fairfield City Council", "Fairfield", "NSW"),
       CGIScraper.new("Moreland City Council", "Moreland (City)", "VIC", "perl", "moreland.pl"),
       ScraperWikiScraper.new("Bankstown City Council", "Bankstown", "NSW"), # Broken (URL & page changed)
       ScraperWikiScraper.new("Bellingen Shire Council", "Bellingen", "NSW"),
