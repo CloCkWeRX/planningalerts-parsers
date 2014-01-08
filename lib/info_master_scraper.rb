@@ -16,13 +16,14 @@ class InfoMasterScraper < Scraper
     page = agent.get(url)
     
     # Click the Ok button on the form
-    form = page.forms_with(:name => /frmMasterView|frmMasterPlan|frmApplicationMaster/).first
-    form.submit(form.button_with(:name => /btnOk|Yes|Button1|Agree/))
+    form = page.forms_with(:name => /frmMasterView|frmMasterPlan|frmApplicationMaster|aspnetForm/).first
+    agree_button = form.button_with(:name => /btnOk|Yes|Button1|Agree/)
+    form.submit(agree_button)
 
     # Get the page again
     page = agent.get(url)
 
-    search_form = page.forms_with(:name => /frmMasterView|frmMasterPlan|frmApplicationMaster/).first
+    search_form = page.forms_with(:name => /frmMasterView|frmMasterPlan|frmApplicationMaster|aspnetForm/).first
     
     if search_form.field_with(:name => /txtFrom/).nil?
       search_form[search_form.field_with(:name => /drDates:txtDay1/).name] = date.day

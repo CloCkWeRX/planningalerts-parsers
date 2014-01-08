@@ -2,7 +2,7 @@ require 'info_master_scraper'
 
 class KuringgaiScraper < InfoMasterScraper
   def applications(date)
-    base_url = "http://datracking.kmc.nsw.gov.au/datracking/modules/applicationmaster/default.aspx"
+    base_url = "http://datracking.kmc.nsw.gov.au/datrackingUI/Modules/Applicationmaster/Default.aspx"
     raw_table_values(date, "#{base_url}?page=search", 1).map do |values|
       da = DevelopmentApplication.new(
         :application_id => extract_application_id(values[1]),
