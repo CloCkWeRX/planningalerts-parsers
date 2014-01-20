@@ -9,8 +9,11 @@ def get_record_for_id(id)
   url = "http://jrpp.nsw.gov.au/DevelopmentRegister/tabid/62/ctl/view/mid/424/JRPP_ID/#{id}/language/en-AU/Default.aspx"
   page = agent.get url
 
-  result_table = page.at('#dnn_ctr424_ViewPublicMatter_FormView1').at(:table)
-  raise "JRPP ID #{id} Not Found" if result_table.nil? 
+  result_table = page.at('#dnn_ctr424_ViewPublicMatter_FormView1')
+  raise "JRPP ID #{id} Not Found" if result_table.nil?
+
+  result_table = result_table.at(:table)
+  raise "JRPP ID #{id} Not Found" if result_table.nil?
 
   # Additional data we want to add to the DB
   record = {
